@@ -5,6 +5,8 @@ v.1.0.0
 ### 🕹️ ARCADIA // Arcadia es una biblioteca de juegos indie
 La idea de arcadia es dar un espacio adicional de transito y venta para desarrolladore de videojuegos indie.
 
+🎬 [Video demostrativo](https://www.youtube.com/embed/oKzjVHDuQeg)
+
 ## MODELOS
 ### 🎮 Juego
 Modelo usado para registrar juegos en la web con titulo, descripcion, precio, desarrollador, etiquetas, fecha de salida, portada y trailer.
@@ -30,5 +32,3 @@ Usuario: admin || Contraseña: arcadia1234
 
 ### Usuario de prueba
 Usuario Tokio || Contraseña: arcadia1234
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/oKzjVHDuQeg" frameborder="0" allowfullscreen></iframe>
