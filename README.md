@@ -5,7 +5,7 @@ v.1.0.0
 ### 🕹️ ARCADIA // Arcadia es una biblioteca de juegos indie
 La idea de arcadia es dar un espacio adicional de transito y venta para desarrolladore de videojuegos indie.
 
-🎬 [Video demostrativo](https://www.youtube.com/embed/oKzjVHDuQeg)
+🎬 [Video demostrativo](https://www.youtube.com/embed/oKzjVHDuQeg){:target="_blank"}
 
 ## MODELOS
 ### 🎮 Juego
