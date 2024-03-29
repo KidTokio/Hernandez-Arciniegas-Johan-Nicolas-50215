@@ -1,0 +1,14 @@
+<title>Editando tag | Arcadia</title>
+
+{% extends 'layout.html' %}
+
+{% block contenido %}
+
+<form method="POST" class="formulario2">
+    <h2 class="tituloFormulario">EDITANDO // {{ etiqueta.nombre }}</h2>
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button class="botonFormulario" type="submit">Guardar Cambios</button>
+</form>
+    
+{% endblock contenido %}

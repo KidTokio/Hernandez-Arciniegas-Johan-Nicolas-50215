@@ -1,0 +1,15 @@
+<title>Borrar dev | Arcadia</title>
+
+{% extends 'layout.html' %}
+
+{% block contenido %}
+
+<form method="post" class="formulario3">
+    <h2 class="tituloFormulario">Confirmar eliminación</h2>
+    <p>¿Estás seguro de que deseas eliminar {{ desarrollador.nombre }}?</p>
+    {% csrf_token %}
+    <input class="boton" style="color: #ffffff; font-weight: bold; border-style: solid;" type="submit" value="Eliminar">
+    <a class="boton2" href="/subir/">Cancelar</a>
+</form>
+
+{% endblock contenido %}

@@ -1,0 +1,34 @@
+<title>Explorar juegos | Arcadia</title>
+
+{% extends 'layout.html' %}
+
+{% block contenido %}
+<div class="juegosContenedor">
+    {% for juego in juegos %}
+    <a class="juegoLink" href="{% url 'detalleJuego' juego.id %}">
+        <div class="juegoTarjeta">
+            <img class="juegoCover" src="{{ juego.imagen.url }}" alt="{{ juego.titulo }}">
+            <h5 class="juegoTitulo">{{ juego.titulo }}</h5>
+            <a class="juegoDev" href="{{ juego.desarrollador.link }}" target="_blank">{{ juego.desarrollador }}</a>
+            <h6 class="juegoEtiqueta">
+                {% for etiqueta in juego.etiquetas.all %}
+                #{{ etiqueta.nombre }}
+                {% endfor %}
+            </h6>
+            <h5 class="juegoPrecio">
+                {% if juego.precio == 0 %}
+                FREE TO PLAY
+                {% else %}
+                $ {{ juego.precio }}
+                {% endif %}
+                </h4>
+                <!-- Enlace para editar el juego -->
+                {% if user.is_staff %}
+                <a class="linkCrud" href="{% url 'editarJuego' juego.id %}">✏️ Editar</a>
+                <a class="linkCrud" href="{% url 'borrarJuego' juego.id %}">🗑️ Borrar</a>
+                {% endif %}
+        </div>
+    </a>
+    {% endfor %}
+</div>
+{% endblock contenido %}

@@ -1,0 +1,14 @@
+<title>Registrate | Arcadia</title>
+
+{% extends 'layout.html' %}
+
+{% block contenido %}
+
+<form method="post" enctype="multipart/form-data" class="formulario">
+    <h2 class="tituloFormulario">REGISTRATE</h2>
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button class="botonFormulario" type="submit">Registrarse</button>
+</form>
+    
+{% endblock contenido %}

@@ -1,0 +1,15 @@
+<title>Borrar jam | Arcadia</title>
+
+{% extends 'layout.html' %}
+
+{% block contenido %}
+
+<form method="post" class="formulario3">
+    <h2 class="tituloFormulario">Confirmar eliminación</h2>
+    <p>¿Estás seguro de que deseas eliminar {{ gamejam.titulo }}?</p>
+    {% csrf_token %}
+    <input class="boton" style="color: #ffffff; font-weight: bold; border-style: solid;" type="submit" value="Eliminar">
+    <a class="boton2" href="/gamejams/">Cancelar</a>
+</form>
+
+{% endblock contenido %}

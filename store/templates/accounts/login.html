@@ -1,0 +1,21 @@
+<title>Inicia sesión | Arcadia</title>
+
+{% extends 'layout.html' %}
+
+{% block contenido %}
+
+<form method="post" class="formulario">
+    <h2 class="tituloFormulario">INICIAR SESION</h2>
+    {% csrf_token %}
+    <div class="campoFormulario">
+        <label for="username">Nombre de usuario:</label>
+        <input type="text" id="username" name="username">
+    </div>
+    <div class="campoFormulario">
+        <label for="password">Contraseña:</label>
+        <input type="password" id="password" name="password">
+    </div>
+    <button type="submit" class="botonFormulario">Iniciar sesión</button>
+</form>
+
+{% endblock contenido %}

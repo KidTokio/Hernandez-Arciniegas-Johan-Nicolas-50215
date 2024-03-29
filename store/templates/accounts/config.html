@@ -1,0 +1,12 @@
+<title>Perfil | Arcadia</title>
+
+{% extends 'layout.html' %}
+{% block contenido %}
+<form method="post" enctype="multipart/form-data" class="formulario">
+    <h2 class="tituloFormulario">CONFIGURAR CUENTA</h2>
+    {% csrf_token %}
+    {{ user_form.as_p }}
+    {{ profile_form.as_p }}
+    <button type="submit" class="botonFormulario">Guardar cambios</button>
+</form>
+{% endblock contenido %}

@@ -1,0 +1,613 @@
+@font-face {
+    font-family: "Pixel";
+    src: url("../fonts/Daydream.woff") format('woff');
+}
+
+body {
+    background-color: #ffffff;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.arcadia {
+    font-family: Pixel, sans-serif;
+    text-decoration: none;
+    font-style: normal;
+    color: #141414;
+    font-size: 30px;
+    transition: all 0.2s;
+}
+
+.arcadia:hover {
+    color: rgb(164, 96, 228);
+    transition: all 0.2s;
+}
+
+.margen {
+    margin: 0% 10%;
+}
+
+.efecto {
+    margin: 0% 10%;
+    animation: fadeIn 1s;
+    animation: fadeOut 1s;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        filter: blur(5px);
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 0;
+        filter: blur(5px);
+    }
+}
+
+.boton {
+    background-color: #141414;
+    color: #ffffff;
+    text-align: center;
+    border: 0px;
+    margin: 5% 2%;
+    padding: 1% 10%;
+    width: 200px;
+    height: 40px;
+    transition: all 0.2s;
+    border: transparent;
+    border-style: solid;
+    text-decoration: none;
+}
+
+.boton:hover {
+    background-color: rgb(164, 96, 228);
+    transition: all 0.2s;
+    box-shadow: 5px 5px 0px 0px #141414;
+    border: #141414;
+    border-style: solid;
+}
+
+.botonJam {
+    background-color: #141414;
+    color: #ffffff;
+    text-align: center;
+    border: 0px;
+    padding: 1% 10%;
+    transition: all 0.2s;
+    border: transparent;
+    border-style: solid;
+    text-decoration: none;
+}
+
+.botonJam:hover {
+    background-color: rgb(164, 96, 228);
+    transition: all 0.2s;
+    box-shadow: 5px 5px 0px 0px #141414;
+    border: #141414;
+    border-style: solid;
+}
+
+.boton2 {
+    background-color: #ffffff;
+    color: #141414;
+    text-align: center;
+    border: #141414;
+    margin: 5% 2%;
+    padding: 1% 10%;
+    width: 200px;
+    height: 40px;
+    transition: all 0.2s;
+    border-style: solid;
+    text-decoration: none;
+}
+
+.boton2:hover {
+    background-color: rgb(164, 96, 228);
+    border-color: transparent;
+    color: #ffffff;
+    box-shadow: 5px 5px 0px 0px #141414;
+    border: #141414;
+    border-style: solid;
+}
+
+.busqueda {
+    outline: none;
+    text-align: center;
+    border-style: solid;
+    border-color: #141414;
+    width: 400px;
+    padding: 5% 3%;
+    height: 40px;
+    margin: 5% 0%;
+}
+
+.navegacion {
+    display: flex;
+    justify-content: space-around;
+    padding: 1%;
+    margin-bottom: 1%;
+}
+
+.nav {
+    font-weight: bold;
+    text-decoration: none;
+    font-style: normal;
+    background-color: transparent;
+    color: #141414;
+    text-align: center;
+    padding: 10px 50px;
+    transition: all 0.2s;
+    border: transparent;
+    border-style: solid;
+}
+
+.nav:hover {
+    color: #ffffff;
+    background-color: rgb(164, 96, 228);
+    transition: all 0.2s;
+    box-shadow: 5px 5px 0px 0px #141414;
+    border: #141414;
+    border-style: solid;
+}
+
+.juegoLink {
+    text-decoration: none;
+}
+
+.juegosContenedor {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.juegoTitulo {
+    font-style: normal;
+    text-decoration: none;
+    font-weight: bold;
+    color: #141414;
+}
+
+.juegoTarjeta {
+    display:block;
+    width: 280px;
+    color: #141414;
+    height: auto;
+    margin: 1% 1%;
+    padding: 1%;
+    background-color: #ffffff;
+    border-style: solid;
+    border-color: #141414;
+    transition: all 0.2s;
+}
+
+.juegoCover {
+    width: 240px;
+    margin: auto;
+    display:flex;
+    justify-content: top;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 4%;
+}
+
+.juegoPrecio {
+    background-color: #141414;
+    padding: 2%;
+    margin-top: 5%;
+    color: #ffffff;
+    width: fit-content;
+}
+
+.juegoEtiqueta {
+    color: #1414147e;
+    margin-top: 5%;
+    padding: 2%;
+    width: fit-content;
+}
+
+.juegoTarjeta:hover {
+    color: #ffffff;
+    border-style: solid;
+    border-color: #141414;
+    transform: scale(1.05);
+    transition: all 0.2s;
+    box-shadow: 10px 10px 0px 0px #141414;
+}
+
+.juegoDev {
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: -5%;
+    color: rgb(164, 96, 228);
+    transition: all 0.2s;
+}
+
+.juegoDev:hover {
+    color: #34b177;
+    transition: all 0.2s;
+}
+
+.tituloPrincipal {
+    margin: 2% 0;
+}
+
+.juegoPagina {
+    display: flex;
+    justify-content: center;
+}
+
+.juegoInfo {
+    margin-left: 5%;
+    color: #141414;
+    width: 50%;
+}
+
+.desarrolladorInfo {
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: -5%;
+    color: rgb(164, 96, 228);
+    transition: all 0.2s;
+}
+
+.desarrolladorInfo:hover {
+    color: #34b177;
+    transition: all 0.2s;
+}
+
+.compraDivisor {
+    margin-top: 10%;
+}
+
+.botonCompra {
+    background-color: #141414;
+    color: #ffffff;
+    border: 0px;
+    padding: 3% 10%;
+    transition: all 0.2s;
+    border: transparent;
+    border-style: solid;
+    text-decoration: none;
+}
+
+.botonCompra:hover {
+    background-color: rgb(164, 96, 228);
+    transition: all 0.2s;
+    box-shadow: 5px 5px 0px 0px #141414;
+    border: #141414;
+    border-style: solid;
+}
+
+.gameJamContenedor {
+    display: block;
+    justify-content: center;
+}
+
+.gameJamTarjeta {
+    background-color: #141414;
+    display: flex;
+    justify-content: start;
+    color: #ffffff;
+    margin-bottom: 3%;
+}
+
+.gameJamCover {
+    width: 700px;
+}
+
+.gameJamDivider {
+    margin: 1% 1%;
+}
+
+.gameJamTitulo {
+    font-weight: bold;
+}
+
+.gameJamFecha {
+    color: #141414;
+    background-color: #ffffff;
+    padding: 5px;
+    width: fit-content;
+    margin: 2% 0;
+}
+
+.gameJamPremio {
+    margin-bottom: 5%;
+}
+
+.botonUnirse {
+    background-color: rgb(164, 96, 228);
+    font-weight: bold;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 1.5% 5%;
+    transition: all 0.2s;
+}
+
+.botonUnirse:hover {
+    background-color: rgb(255, 255, 255);
+    color: #141414;
+    transition: all 0.2s;
+}
+
+.usuarioTexto {
+    font-weight: bold;
+    font-size: 25px;
+    margin-left: -60px;
+}
+
+.usuarioLink {
+    font-weight: bold;
+    text-decoration: none;
+    color: rgb(164, 96, 228);
+    transition: all 0.2s;
+}
+
+.usuarioLink:hover {
+    color: #34b177;
+    transition: all 0.2s;
+}
+
+.cerrarSesion {
+    color: #141414;
+    text-decoration: none;
+    transition: all 0.2s;
+}
+
+.cerrarSesion:hover {
+    color: rgb(164, 96, 228);
+    transition: all 0.2s;
+}
+
+.logoutLink {
+    margin-left: 5%;
+    margin-top: 5px;
+    
+}
+
+.infoUsuario {
+    display: flex;
+    justify-content: space-around;
+    width:500px;
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 10px;
+}
+
+.formulario {
+    color: #141414;
+    text-align: start;
+    display: block;
+    width: 250px;
+    font-weight: bold;
+    margin: 2% auto;
+}
+
+.formulario input {
+    color: #141414;
+    width: 250px;
+    height: 40px;
+    border: 1px solid #141414;
+    margin-bottom: 5%;
+}
+
+.botonFormulario {
+    background-color: #141414;
+    color: #ffffff;
+    text-align: center;
+    border: 0px;
+    margin: 5% auto;
+    padding: 1% 10%;
+    width: 250px;
+    height: 40px;
+    transition: all 0.2s;
+    border: transparent;
+    border-style: solid;
+    text-decoration: none;
+    display: block;
+}
+
+.botonFormulario:hover {
+    background-color: rgb(164, 96, 228);
+    transition: all 0.2s;
+    box-shadow: 5px 5px 0px 0px #141414;
+    border: #141414;
+    border-style: solid;
+}
+
+.tituloFormulario {
+    margin: 5% auto; /* Ajustado el margen */
+    font-weight: bold;
+    text-align: center; /* Añadido para centrar el texto */
+}
+
+.formulario2 {
+    color: #141414;
+    text-align: start;
+    display: block;
+    width: 250px;
+    font-weight: bold;
+    margin: 2% auto;
+}
+
+.formulario3 {
+    color: #141414;
+    text-align: center;
+    display: block;
+    width: 500px;
+    font-weight: bold;
+    margin: 2% auto;
+}
+
+.formulario3 input {
+    color: #141414;
+    width: 250px;
+    border: 1px solid #141414;
+    margin-bottom: 5%;
+}
+
+.formulario2 input {
+    color: #141414;
+    width: 250px;
+    border: 1px solid #141414;
+    margin-bottom: 5%;
+}
+
+.formulario2 input[type="checkbox"] {
+    border: 1px solid #ff3d3d;
+}
+
+.formulario2 input[type="checkbox"] {
+    display: visible;
+    width: 20px;
+    margin: -20px 0px;
+}
+
+.jam {
+    margin: 5% auto;
+}
+
+.divisoresFormularios {
+    display: flex;
+    justify-content: center
+}
+
+.contenedorForm {
+    margin: 0 10%;
+}
+
+.banner {
+    width: 100%;
+    box-shadow: 10px 10px 0px 0px #141414;
+    border-color: #141414;
+    border-style: solid;
+}
+
+.banner2 {
+    width: 500px;
+    box-shadow: 10px 10px 0px 0px #141414;
+    border-color: #141414;
+    border-style: solid;
+}
+
+.contenedorPrincipal {
+    display: flex;
+}
+
+.contenedorSecundario {
+    width: 50%;
+    margin: auto;
+}
+
+.contenedorSecundario2 {
+    margin: auto;
+}
+
+.info {
+    padding: 0 10%;
+    font-size: 20px;
+}
+
+.botonInfo {
+    background-color: #141414;
+    color: #ffffff;
+    text-align: center;
+    border: 0px;
+    margin: 10% 10%;
+    padding: 1% 10%;
+    width: 200px;
+    height: 40px;
+    transition: all 0.2s;
+    border: transparent;
+    border-style: solid;
+    text-decoration: none;
+}
+
+.botonInfo:hover {
+    background-color: rgb(164, 96, 228);
+    transition: all 0.2s;
+    box-shadow: 5px 5px 0px 0px #141414;
+    border: #141414;
+    border-style: solid;
+}
+
+.divisorTitulo {
+    margin: 5% 0 2% 0;
+    font-weight: bold;
+    text-align: center;
+    background-color: #141414;
+    color: #ffffff;
+    height: fit-content;
+}
+
+.tituloInfo {
+    padding: 1% 0;
+}
+
+.tituloInfo2 {
+    padding: 0 10%;
+}
+
+.cancelar {
+    text-decoration: none;
+    color: rgb(164, 96, 228);
+}
+
+.botones {
+    margin-top: 30px;
+}
+
+.linkCrud {
+    margin-top: 30px;
+    text-decoration: none;
+    color: rgb(164, 96, 228);
+    transition: all 0.2s;
+    font-weight: bold;
+}
+
+.linkCrud:hover {
+    transition: all 0.2s;
+    color: #34b177;
+}
+
+.linkCrud2 {
+    text-decoration: none;
+    color: rgb(164, 96, 228);
+    transition: all 0.2s;
+    font-weight: bold;
+}
+
+.linkCrud2:hover {
+    transition: all 0.2s;
+    color: #34b177;
+}
+
+.tagShow {
+    background-color: #141414;
+    color: #ffffff;
+    margin-bottom: 5%;
+    padding: 5%;
+    text-align: center;
+}
+
+.footer {
+    background-color: #141414;
+    margin-top: 3%;
+    padding: 1% 10% 0.5% 10%;
+    color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+}
+
+#content {
+    padding: 20px;
+}
+
+.fade-out {
+    opacity: 0;
+}

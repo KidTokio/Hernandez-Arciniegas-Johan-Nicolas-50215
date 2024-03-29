@@ -1,0 +1,55 @@
+<title>Subir juego | Arcadia</title>
+
+{% extends 'layout.html' %}
+
+{% block contenido %}
+<div class="divisoresFormularios">
+    <div class="contenedorForm">
+        <form method="post" enctype="multipart/form-data" class="formulario2">
+            <h2 class="tituloFormulario">SUBIR JUEGO</h2>
+            {% csrf_token %}
+            {{ juego_form.as_p }}
+            <button class="botonFormulario" type="submit" name="juego_submit">Guardar</button>
+        </form>
+    </div>
+
+    <div class="contenedorForm">
+        <form method="post" class="formulario2">
+            <h2 class="tituloFormulario">CREAR ETIQUETA</h2>
+            {% csrf_token %}
+            {{ etiqueta_form.as_p }}
+            <button class="botonFormulario" type="submit" name="etiqueta_submit">Guardar</button>
+        </form>
+        <h4 style="margin-top: 50px; margin-bottom: 25px;">ETIQUETAS CREADAS</h4>
+        {% for etiqueta in etiquetas %}
+        <div class="tagShow">
+            <h6>{{ etiqueta.nombre }}</h6>
+            {% if user.is_staff %}
+            <a class="linkCrud2" href="{% url 'editarTag' etiqueta.id %}">✏️ Editar</a>
+            <a class="linkCrud2" href="{% url 'borrarTag' etiqueta.id %}">🗑️ Borrar</a>
+            {% endif %}
+        </div>
+        {% endfor %}
+    </div>
+
+    <div class="contenedorForm">
+        <form method="post" class="formulario2">
+            <h2 class="tituloFormulario">CREAR DESARROLLADOR</h2>
+            {% csrf_token %}
+            {{ desarrollador_form.as_p }}
+            <button class="botonFormulario" type="submit" name="desarrollador_submit">Guardar</button>
+        </form>
+        <h4 style="margin-top: 50px; margin-bottom: 25px;">DEVS CREADOS</h4>
+        {% for desarrollador in desarrolladores %}
+        <div class="tagShow">
+            <h6>{{ desarrollador.nombre }}</h6>
+            {% if user.is_staff %}
+            <a class="linkCrud2" href="{% url 'editarDev' desarrollador.id %}">✏️ Editar</a>
+            <a class="linkCrud2" href="{% url 'borrarDev' desarrollador.id %}">🗑️ Borrar</a>
+            {% endif %}
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock contenido %}

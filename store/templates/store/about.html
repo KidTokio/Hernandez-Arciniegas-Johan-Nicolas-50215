@@ -1,0 +1,34 @@
+<title>Sobre mi | Arcadia</title>
+
+{% extends 'layout.html' %}
+{% load static %}
+{% block contenido %}
+
+<div class="contenedorPrincipal" style="margin: 5% 0%;">
+    <div class="contenedorSecundario2">
+        <img class="banner2" src="{% static 'images/pp.png' %}" alt="Imagen de ejemplo">
+    </div>
+    <div class="contenedorSecundario2">
+        <h2 class="tituloInfo2">¡Hola!, Te hablo un poco de mi.</h2>
+        <h6 class="info">
+            Me llamo Nicolas Hernandez, tengo 23 años, soy de Colombia aunque llevo varios años ya viviendo en Chile.
+            Soy un aficionado de la tecnologia en general. Este es mi primer acercamiento mas profundo hacia algo como
+            un lenguaje de programacion ya que aunque una de mis pasiones sea la tecnologia hay otra que es la cocina y
+            es a lo que mas le he dedicado mi vida si hablamos de tema academico, profesional y laboral. Desde pequeño
+            me han interesado la tecnologia en todos los aspectos lo cual me ha hecho estar muy informado y me ha
+            llevado a aprender temas de hardware y software de una manera autodidacta. <br><br>Emepece este curso con un
+            conocimiento 0 de python y la verdad es que estoy bastante feliz con el avance que he conseguido a lo largo
+            de estos meses, solo espero poder seguir preparandome para en algun momento soltar el cuchillo y reemplazar
+            los sartenes por un teclado y una pantalla.</h6>
+
+        <div class="jam" style="text-align: center;">
+            <a class="botonJam" style="margin-right: 2%;"
+                href="https://www.linkedin.com/in/johan-nicol%C3%A1s-hernandez-arciniegas-532867166/"
+                target="_blank">Linkedin</a>
+            <a class="botonJam" style="margin-right: 2%;" href="https://github.com/KidTokio" target="_blank">GitHub</a>
+            <a class="botonJam" style="margin-right: 2%;" href="https://www.instagram.com/kid.tokio/"
+                target="_blank">Instagram</a>
+        </div>
+    </div>
+</div>
+{% endblock contenido %}

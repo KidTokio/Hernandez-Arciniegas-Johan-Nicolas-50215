@@ -1,0 +1,54 @@
+<title>Biblioteca indie | Arcadia</title>
+
+{% extends 'layout.html' %}
+{% load static %}
+{% block contenido %}
+<div class="contenedorPrincipal">
+    <div class="contenedorSecundario">
+        <img class="banner" src="{% static 'images/2.png' %}" alt="Imagen de ejemplo">
+    </div>
+    <div class="contenedorSecundario">
+        <h2 class="tituloInfo2">Arcadia, Biblioteca Indie</h2>
+        <h6 class="info">
+            ¡Bienvenido a nuestra tienda de juegos indie, donde la creatividad y la innovación se fusionan para
+            ofrecerte experiencias de juego únicas! Sumérgete en un mundo de aventuras fuera de lo común, donde cada
+            título es una obra de arte meticulosamente diseñada por desarrolladores apasionados. Desde emocionantes
+            rompecabezas hasta narrativas envolventes, nuestra colección de juegos indie te llevará a explorar nuevos
+            mundos, desafiar tus habilidades y descubrir historias que nunca antes habías imaginado. Únete a nuestra
+            comunidad de jugadores apasionados y descubre la magia de los juegos indie en nuestra tienda. ¡La diversión
+            te espera!</h6>
+
+        <div class="jam">
+            <a href="/explorar" class="botonInfo">Explorar biblioteca</a>
+        </div>
+    </div>
+</div>
+<div class="divisorTitulo">
+    <h2 class="tituloInfo">JUEGOS DESTACADOS</h2>
+</div>
+<div class="juegosContenedor">
+    {% for juego in juegos %}
+    {% if forloop.counter <= 4 %} <a class="juegoLink" href="{% url 'detalleJuego' juego.id %}">
+        <div class="juegoTarjeta">
+            <img class="juegoCover" src="{{ juego.imagen.url }}" alt="{{ juego.titulo }}">
+            <h5 class="juegoTitulo">{{ juego.titulo }}</h5>
+            <a class="juegoDev" href="{{ juego.desarrollador.link }}" target="_blank">{{ juego.desarrollador }}</a>
+            <h6 class="juegoEtiqueta">
+                {% for etiqueta in juego.etiquetas.all %}
+                #{{ etiqueta.nombre }}
+                {% endfor %}
+            </h6>
+            <h5 class="juegoPrecio">
+                {% if juego.precio == 0 %}
+                FREE TO PLAY
+                {% else %}
+                $ {{ juego.precio }}
+                {% endif %}
+            </h5>
+        </div>
+        </a>
+        {% endif %}
+        {% endfor %}
+</div>
+
+{% endblock contenido %}

@@ -1,0 +1,33 @@
+<title>Arcadia</title>
+
+{% extends 'layout.html' %}
+
+{% block contenido %}
+
+<div class="juegoPagina">
+    <div>
+        <video width="100%" controls>
+            <source src="{{ juego.trailer.url }}" type="video/mp4">
+        </video>
+    </div>
+    <div class="juegoInfo"">
+        <h1 class=" tituloPrincipal">{{juego.titulo}}</h1>
+        <h6> {{ juego.descripcion }}</h6>
+        <h4><br>Desarrollador</h4>
+        <a class="desarrolladorInfo" href="{{juego.desarrollador.link}}">{{juego.desarrollador}}</a>
+        <div class="compraDivisor">
+            <a class="botonCompra" href="/">{% if juego.precio == 0 %}
+                FREE TO PLAY
+                {% else %}
+                COMPRALO POR {{ juego.precio }}
+                {% endif %}</a>
+            <div class="botones">
+                {% if user.is_staff %}
+                <a class="linkCrud" href="{% url 'editarJuego' juego.id %}">✏️ Editar</a>
+                <a class="linkCrud" href="{% url 'borrarJuego' juego.id %}">🗑️ Borrar</a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock contenido %}

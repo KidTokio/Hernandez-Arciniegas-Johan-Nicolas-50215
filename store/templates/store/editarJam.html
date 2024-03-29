@@ -1,0 +1,14 @@
+<title>Editando jam | Arcadia</title>
+
+{% extends 'layout.html' %}
+
+{% block contenido %}
+
+<form method="POST" class="formulario2">
+    <h2 class="tituloFormulario">EDITANDO // {{ gamejam.titulo }}</h2>
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button class="botonFormulario" type="submit">Guardar Cambios</button>
+</form>
+    
+{% endblock contenido %}
