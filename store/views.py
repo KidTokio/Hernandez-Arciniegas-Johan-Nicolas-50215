@@ -151,12 +151,6 @@ class borrarDev(DeleteView):
     success_url = reverse_lazy("subirJuego") 
 
 
-
-def mi_vista(request):
-    usuarioActual = request.user
-    return render(request, "mi_template.html", {"usuarioActual": usuarioActual})
-
-
 # VISTA ERROR 404 _______________________________________________________
 
 def error404(request, exception):
