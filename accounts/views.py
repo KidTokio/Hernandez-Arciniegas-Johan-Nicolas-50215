@@ -54,9 +54,9 @@ def config(request):
         if user_form.is_valid() and profile_form.is_valid():
             user_form.save()
             profile_form.save()
-            return redirect('index')
+            return redirect("index")
     else:
         user_form = UserSettingsForm(instance=user)
         profile_form = UserProfileForm(instance=profile)
 
-    return render(request, 'accounts/config.html', {'user_form': user_form, 'profile_form': profile_form})
+    return render(request, "accounts/config.html", {"user_form": user_form, "profile_form": profile_form})

@@ -7,7 +7,7 @@ class JuegoForm(forms.ModelForm):
     
     class Meta:
         model = Juego
-        fields = ['titulo', 'descripcion', 'etiquetas', 'precio', 'lanzamiento', 'desarrollador', 'imagen', 'trailer']
+        fields = ["titulo", "descripcion", "etiquetas", "precio", "lanzamiento", "desarrollador", "imagen", "trailer"]
 
     def save(self, commit=True):
         instance = super(JuegoForm, self).save(commit=False)
@@ -21,22 +21,22 @@ class JuegoForm(forms.ModelForm):
 class GameJamForm(forms.ModelForm):
     class Meta:
         model = GameJam
-        fields = '__all__'
+        fields = "__all__"
 
     def __init__(self, *args, **kwargs):
         super(GameJamForm, self).__init__(*args, **kwargs)
-        self.fields['fechaLimite'].widget.attrs['class'] = 'datepicker'
+        self.fields["fechaLimite"].widget.attrs["class"] = "datepicker"
 
 
 # Formulario para agregar o editar una etiqueta
 class EtiquetaForm(forms.ModelForm):
     class Meta:
         model = Etiqueta
-        fields = ['nombre']
+        fields = ["nombre"]
 
 
 # Formulario para agregar o editar un desarrollador
 class DesarrolladorForm(forms.ModelForm):
     class Meta:
         model = Desarrollador
-        fields = ['nombre', 'link']
+        fields = ["nombre", "link"]
